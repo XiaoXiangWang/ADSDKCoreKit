@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [NSValue valueWithCGPoint:<#(CGPoint)#>]
+#if TARGET_OS_MAC &&!(TARGET_OS_EMBEDDED||TARGET_OS_IPHONE)
+    NSLog(@"Mac");
+#else
+    NSLog(@"iPhone");
+#endif
     return YES;
 }
 

@@ -11,7 +11,10 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
+       
+#if TARGET_API_MAC_OSX
+         NSLog(@"Hello, World!");
+#endif
     }
     return 0;
 }
