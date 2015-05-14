@@ -9,5 +9,15 @@
 #import "NSMutableArray+PGSDKCommon.h"
 
 @implementation NSMutableArray (PGSDKCommon)
-
+-(void)PGSDK_addObject:(id)object{
+    @try {
+        [self addObject:object];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"#Exception:%@",exception);
+    }
+    @finally {
+        
+    }
+}
 @end

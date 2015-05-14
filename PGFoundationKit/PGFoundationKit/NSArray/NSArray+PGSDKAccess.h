@@ -54,6 +54,8 @@
 
 -(long long)PGSDK_longlongValueAtIndex:(NSUInteger)index;
 
+-(unsigned long long)PGSDK_unsignedlonglongValueAtIndex:(NSUInteger)index;
+
 -(char)PGSDK_charValueAtIndex:(NSUInteger)index;
 
 -(short)PGSDK_shortValueAtIndex:(NSUInteger)index;

@@ -79,6 +79,7 @@ NSException* PGSDKaccessException(NSString* reason,Class class,id object){
 
 @implementation NSArray (PGSDKAccessBaseType)
 
+
 -(NSInteger)PGSDK_integerValueAtIndex:(NSUInteger)index{
     id object = [self PGSDK_objectAtIndex:index];
     //如果返回内容为空
@@ -103,6 +104,174 @@ NSException* PGSDKaccessException(NSString* reason,Class class,id object){
     }else{
 #if DEBUG
         @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"NSUInteger\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+
+-(double)PGSDK_doubleValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(doubleValue)]) {
+        return [object doubleValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"double\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+
+-(CGFloat)PGSDK_CGFloatAtIndex:(NSUInteger)index{
+    return [self PGSDK_doubleValueAtIndex:index];
+}
+
+-(float)PGSDK_floatValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(floatValue)]) {
+        return [object floatValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"float\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+
+-(BOOL)PGSDK_BOOLValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(boolValue)]) {
+        return [object boolValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"bool\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+
+-(char)PGSDK_charValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(charValue)]) {
+        return [object charValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"char\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+
+-(short)PGSDK_shortValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(shortValue)]) {
+        return [object shortValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"short\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+
+-(long)PGSDK_longValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(longValue)]) {
+        return [object longValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"long\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+
+-(unsigned long)PGSDK_unsignedLongValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(unsignedLongValue)]) {
+        return [object unsignedLongValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"unsignedLong\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+-(long long)PGSDK_longlongValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(longLongValue)]) {
+        return [object longLongValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"longLong\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+
+-(unsigned long long)PGSDK_unsignedlonglongValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(unsignedLongLongValue)]) {
+        return [object unsignedLongLongValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"unsignedLongLong\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+
+-(int)PGSDK_intValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(intValue)]) {
+        return [object intValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"int\"", nil),((NSObject*)object).class,object);
+#endif
+        return 0;
+    }
+}
+
+-(unsigned int)PGSDK_unsignedIntValueAtIndex:(NSUInteger)index{
+    id object = [self PGSDK_objectAtIndex:index];
+    //如果返回内容为空
+    if (object == nil) return 0;
+    
+    if ([object respondsToSelector:@selector(unsignedIntValue)]) {
+        return [object unsignedIntValue];
+    }else{
+#if DEBUG
+        @throw PGSDKaccessException(NSLocalizedString(@"你要访问的目标内容,并不是\"int\"", nil),((NSObject*)object).class,object);
 #endif
         return 0;
     }

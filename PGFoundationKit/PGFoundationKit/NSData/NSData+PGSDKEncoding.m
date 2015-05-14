@@ -1,44 +1,51 @@
 //
-//  NSData+Base64.m
-//  IOS-Categories
+//  NSData+PGSDKEncoding.m
+//  PGFoundationKit
 //
-//  Created by Jakey on 15/1/26.
-//  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
+//  Created by 汪潇翔 on 15/5/8.
+//  Copyright (c) 2015年 PGSDK. All rights reserved.
 //
 
-#import "NSData+Base64.h"
-#pragma GCC diagnostic ignored "-Wselector"
-#import <Availability.h>
+#import "NSData+PGSDKEncoding.h"
 
-@implementation NSData (Base64)
-
-+ (NSData *)dataWithBase64EncodedString:(NSString *)string
-{
+#if !__has_feature(objc_arc)
+#error NSData+PGSDKBase64Encoding must be built with ARC.
+// You can turn on ARC for files by adding -fobjc-arc to the build phase for each of its files.
+#endif
+@implementation NSData (PGSDKBase64Encoding)
++ (NSData *)PGSDK_dataWithBase64EncodedString:(NSString *)string{
     if (![string length]) return nil;
+    
     NSData *decoded = nil;
+    
 #if __MAC_OS_X_VERSION_MIN_REQUIRED < __MAC_10_9 || __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+    
     if (![NSData instancesRespondToSelector:@selector(initWithBase64EncodedString:options:)])
     {
         decoded = [[self alloc] initWithBase64Encoding:[string stringByReplacingOccurrencesOfString:@"[^A-Za-z0-9+/=]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [string length])]];
-    }
-    else
+    }else
 #endif
     {
         decoded = [[self alloc] initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
     }
+    
     return [decoded length]? decoded: nil;
 }
-- (NSString *)base64EncodedStringWithWrapWidth:(NSUInteger)wrapWidth
-{
+- (NSString *)PGSDK_base64EncodedStringWithWrapWidth:(NSUInteger)wrapWidth{
     if (![self length]) return nil;
+    
     NSString *encoded = nil;
+    
 #if __MAC_OS_X_VERSION_MIN_REQUIRED < __MAC_10_9 || __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+    
     if (![NSData instancesRespondToSelector:@selector(base64EncodedStringWithOptions:)])
     {
         encoded = [self base64Encoding];
     }
     else
+        
 #endif
+        
     {
         switch (wrapWidth)
         {
@@ -56,10 +63,12 @@
             }
         }
     }
+    
     if (!wrapWidth || wrapWidth >= [encoded length])
     {
         return encoded;
     }
+    
     wrapWidth = (wrapWidth / 4) * 4;
     NSMutableString *result = [NSMutableString string];
     for (NSUInteger i = 0; i < [encoded length]; i+= wrapWidth)
@@ -72,10 +81,10 @@
         [result appendString:[encoded substringWithRange:NSMakeRange(i, wrapWidth)]];
         [result appendString:@"\r\n"];
     }
+    
     return result;
 }
-- (NSString *)base64EncodedString
-{
-    return [self base64EncodedStringWithWrapWidth:0];
+- (NSString *)PGSDK_base64EncodedString{
+    return [self PDSDK_base64EncodedStringWithWrapWidth:0];
 }
 @end

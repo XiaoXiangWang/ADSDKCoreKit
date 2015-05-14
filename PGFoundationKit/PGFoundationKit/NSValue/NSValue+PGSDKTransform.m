@@ -107,12 +107,12 @@
     return [self PGSDK_rectValue];
 }
 -(CGVector)PGSDK_CGVectorValue{
-    CGVector vector;
+    CGVector vector = CGVectorMake(0, 0);
     [self getValue:&vector];
     return vector;
 }
 -(CGAffineTransform)PGSDK_CGAffineTransformValue{
-    CGAffineTransform transform;
+    CGAffineTransform transform = CGAffineTransformIdentity;
     [self getValue:&transform];
     return transform;
 }

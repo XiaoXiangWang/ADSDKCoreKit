@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSMutableArray+PGSDKCommon.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
        
-#if TARGET_API_MAC_OSX
-         NSLog(@"Hello, World!");
-#endif
+        NSMutableDictionary* dictionary = [[NSThread currentThread] threadDictionary];
+        NSLog(@"%@",dictionary);
     }
     return 0;
 }
