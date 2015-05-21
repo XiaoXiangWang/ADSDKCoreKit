@@ -12,4 +12,5 @@
 
 @interface NSBundle (PGSDKCommon)
 +(NSString*)PGSDK_AppVersion;
++(NSDictionary*)PGSDK_infoDictionary;
 @end

@@ -17,4 +17,8 @@
 +(NSString *)PGSDK_AppVersion{
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 };
+
++(NSDictionary *)PGSDK_infoDictionary{
+    return [[NSBundle mainBundle] infoDictionary];
+}
 @end

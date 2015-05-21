@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE445EA61B0CD85D002A1DC0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE445EA51B0CD85D002A1DC0 /* CoreData.framework */; };
+		BE445EA91B0CD8D7002A1DC0 /* PGSDKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = BE445EA81B0CD8D7002A1DC0 /* PGSDKBase64.m */; };
 		C0DBDE951AFC5B6C001BFF26 /* NSBundle+PGSDKCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDE941AFC5B6C001BFF26 /* NSBundle+PGSDKCommon.m */; };
 		C0DBDEA01AFC616B001BFF26 /* PGSDKFoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C0DBDE9F1AFC616B001BFF26 /* PGSDKFoundationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0DBDEA61AFC616B001BFF26 /* PGSDKFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0DBDE9B1AFC616B001BFF26 /* PGSDKFoundationKit.framework */; };
@@ -54,7 +56,6 @@
 		C0DBDF641AFC61D2001BFF26 /* NSTimer+Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F65D111AF1D64A004231D7 /* NSTimer+Addition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0DBDF661AFC61D3001BFF26 /* NSTimer+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F65D131AF1D64A004231D7 /* NSTimer+Blocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0DBDF681AFC61D3001BFF26 /* NSURL+Param.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F65D161AF1D64A004231D7 /* NSURL+Param.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C0DBDF6C1AFC6434001BFF26 /* NSData+PGSDKEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DBDF6B1AFC6434001BFF26 /* NSData+PGSDKEncoding.m */; };
 		C0F65C7C1AF1D5C2004231D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F65C7B1AF1D5C2004231D7 /* main.m */; };
 		C0F65D1A1AF1D6E1004231D7 /* NSArray+PGSDKBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F65D191AF1D6E1004231D7 /* NSArray+PGSDKBlock.m */; };
 		C0F65D1D1AF1DD4D004231D7 /* NSArray+PGSDKAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F65D1C1AF1DD4D004231D7 /* NSArray+PGSDKAccess.m */; };
@@ -86,6 +87,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE445EA51B0CD85D002A1DC0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BE445EA71B0CD8D7002A1DC0 /* PGSDKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSDKBase64.h; sourceTree = "<group>"; };
+		BE445EA81B0CD8D7002A1DC0 /* PGSDKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGSDKBase64.m; sourceTree = "<group>"; };
 		C0DBDE931AFC5B6C001BFF26 /* NSBundle+PGSDKCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+PGSDKCommon.h"; sourceTree = "<group>"; };
 		C0DBDE941AFC5B6C001BFF26 /* NSBundle+PGSDKCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+PGSDKCommon.m"; sourceTree = "<group>"; };
 		C0DBDE9B1AFC616B001BFF26 /* PGSDKFoundationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PGSDKFoundationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +98,6 @@
 		C0DBDEA51AFC616B001BFF26 /* PGSDKFoundationKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGSDKFoundationKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DBDEAB1AFC616B001BFF26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0DBDEAC1AFC616B001BFF26 /* PGSDKFoundationKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGSDKFoundationKitTests.m; sourceTree = "<group>"; };
-		C0DBDF6A1AFC6434001BFF26 /* NSData+PGSDKEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+PGSDKEncoding.h"; sourceTree = "<group>"; };
-		C0DBDF6B1AFC6434001BFF26 /* NSData+PGSDKEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+PGSDKEncoding.m"; sourceTree = "<group>"; };
 		C0F65C781AF1D5C2004231D7 /* PGFoundationKit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PGFoundationKit; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F65C7B1AF1D5C2004231D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C0F65CBF1AF1D64A004231D7 /* NSData+Encrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt.h"; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE445EA61B0CD85D002A1DC0 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +251,7 @@
 		C0F65C6F1AF1D5C2004231D7 = {
 			isa = PBXGroup;
 			children = (
+				BE445EA51B0CD85D002A1DC0 /* CoreData.framework */,
 				C0F65C7A1AF1D5C2004231D7 /* PGFoundationKit */,
 				C0DBDE9C1AFC616B001BFF26 /* PGSDKFoundationKit */,
 				C0DBDEA91AFC616B001BFF26 /* PGSDKFoundationKitTests */,
@@ -270,6 +274,8 @@
 			children = (
 				C0F65D231AF225E4004231D7 /* PGFoundationKitDefines.h */,
 				C0F65D241AF225E4004231D7 /* PGFoundationKitDefines.m */,
+				BE445EA71B0CD8D7002A1DC0 /* PGSDKBase64.h */,
+				BE445EA81B0CD8D7002A1DC0 /* PGSDKBase64.m */,
 				C0F65D1E1AF21966004231D7 /* NSValue */,
 				C0F65CB41AF1D64A004231D7 /* NSArray */,
 				C0F65CB91AF1D64A004231D7 /* NSBundle */,
@@ -318,8 +324,6 @@
 			children = (
 				C0F65CBF1AF1D64A004231D7 /* NSData+Encrypt.h */,
 				C0F65CC01AF1D64A004231D7 /* NSData+Encrypt.m */,
-				C0DBDF6A1AFC6434001BFF26 /* NSData+PGSDKEncoding.h */,
-				C0DBDF6B1AFC6434001BFF26 /* NSData+PGSDKEncoding.m */,
 			);
 			path = NSData;
 			sourceTree = "<group>";
@@ -682,8 +686,8 @@
 				C0DBDE951AFC5B6C001BFF26 /* NSBundle+PGSDKCommon.m in Sources */,
 				C0F65C7C1AF1D5C2004231D7 /* main.m in Sources */,
 				C0F65D281AF237F0004231D7 /* NSMutableArray+PGSDKCommon.m in Sources */,
+				BE445EA91B0CD8D7002A1DC0 /* PGSDKBase64.m in Sources */,
 				C0F65D1D1AF1DD4D004231D7 /* NSArray+PGSDKAccess.m in Sources */,
-				C0DBDF6C1AFC6434001BFF26 /* NSData+PGSDKEncoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
